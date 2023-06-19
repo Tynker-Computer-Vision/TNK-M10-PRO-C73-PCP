@@ -20,6 +20,7 @@ while True:
 
     # Print the class name, confidence score to screen output
     try:
+        image = cv2.rectangle(image,(0,0),(90, 60),(0,0,0),-1)
         image = cv2.putText(image, className[2:], (10, 30), cv2.FONT_HERSHEY_DUPLEX, 0.4, (125, 246, 55), 1)
         image = cv2.putText(image, str(np.round(confidenceScore * 100))[:-2], (10, 50), cv2.FONT_HERSHEY_DUPLEX, 0.4, (125, 246, 55), 1)
     except:
